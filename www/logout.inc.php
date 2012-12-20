@@ -48,7 +48,7 @@
 			</style>
 		</head>
 		<body>
-			<div class="head">what.cd</div>
+			<div class="head">Sherlock (what.cd)</div>
 			<?php
 			if(isset($_GET['err'])){
 			$err=array();

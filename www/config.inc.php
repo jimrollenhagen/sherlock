@@ -57,7 +57,7 @@
 			<script src="js/analytics.js" type="text/javascript" charset="utf-8"></script>
 		</head>
 		<body>
-			<div class="head">what.cd</div>
+			<div class="head">Sherlock (what.cd)</div>
 			<?php
 			if(isset($_POST['pass'])) $_GET['err']=2;
 			if(isset($_GET['err'])){
