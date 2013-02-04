@@ -169,6 +169,7 @@ body#graphmanager_page li#graphmanager_navitem { background: #fff; }
 #custom_graphs .graph .graph_head .secondary ul.graph_key li, #graphs .graph .graph_head .secondary ul.graph_key li { display: inline; margin-left: 10px; padding-left: 15px; }
 #custom_graphs .graph .graph_head .secondary ul.graph_key li span, #graphs .graph .graph_head .secondary ul.graph_key li span { background: #fff; padding-left: 5px; }
 #custom_graphs .graph .graph_body, #graphs .graph .graph_body { padding: 10px 0; }
+.dygraph-legend { pointer-events: none; }
 
 /* Top Ten */
 #topten_list table { border-collapse: collapse; width: 100%; }
