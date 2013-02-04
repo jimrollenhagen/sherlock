@@ -74,7 +74,7 @@ body#graphmanager_page li#graphmanager_navitem { background: #fff; }
 
 /* Content general */
 #content { color: #666; font-size: 1.2em; }
-#content a { color: #3777b2; } text-decoration: none; }
+#content a { color: #3777b2; text-decoration: none; }
 #content a:hover { color: #000; }
 
 /* Page Header */
