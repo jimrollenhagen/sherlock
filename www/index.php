@@ -128,10 +128,10 @@
             }
           ?>
           <ul class="summary_content clearfix" id="buffer_summary">
-            <li class="past_24 <?php echo $daybufferclass; ?>"><span><?php echo getByteStr($daybuffer); ?></span> past 24 hours</li>
-            <li class="past_week <?php echo $weekbufferclass; ?>"><span><?php echo getByteStr($weekbuffer); ?></span> past week</li>
-            <li class="past_month <?php echo $monthbufferclass; ?>"><span><?php echo getByteStr($monthbuffer); ?></span> past month</li>
-            <li class="all_time"><span><?php echo getByteStr($alltimebuffer); ?></span> all-time</li>
+            <li class="past_24 <?php echo $daybufferclass; ?>"><span title="<?php echo "$daybuffer B";?>"><?php echo getByteStr($daybuffer); ?></span> past 24 hours</li>
+            <li class="past_week <?php echo $weekbufferclass; ?>"><span title="<?php echo "$weekbuffer B";?>"><?php echo getByteStr($weekbuffer); ?></span> past week</li>
+            <li class="past_month <?php echo $monthbufferclass; ?>"><span title="<?php echo "$monthbuffer B";?>"><?php echo getByteStr($monthbuffer); ?></span> past month</li>
+            <li class="all_time"><span title="<?php echo "$alltimebuffer B";?>"><?php echo getByteStr($alltimebuffer); ?></span> all-time</li>
           </ul>
           <ul class="summary_content clearfix" id="ratio_summary">
             <li class="past_24 <?php echo $dayratioclass; ?>"><span><?php echo number_format($dayratio,4); ?></span> past 24 hours</li>
@@ -140,16 +140,16 @@
             <li class="all_time"><span><?php echo number_format($alltimeratio,4); ?></span> all-time</li>
           </ul>
           <ul class="summary_content clearfix" id="uploaded_summary">
-            <li class="past_24"><span><?php echo getByteStr($day['uploaded']); ?></span> past 24 hours</li>
-            <li class="past_week"><span><?php echo getByteStr($week['uploaded']); ?></span> past week</li>
-            <li class="past_month"><span><?php echo getByteStr($month['uploaded']); ?></span> past month</li>
-            <li class="all_time"><span><?php echo getByteStr($alltime['uploaded']); ?></span> all-time</li>
+            <li class="past_24"><span title="<?php echo $day['uploaded']." B";?>"><?php echo getByteStr($day['uploaded']); ?></span> past 24 hours</li>
+            <li class="past_week"><span title="<?php echo $week['uploaded']." B";?>"><?php echo getByteStr($week['uploaded']); ?></span> past week</li>
+            <li class="past_month"><span title="<?php echo $month['uploaded']." B";?>"><?php echo getByteStr($month['uploaded']); ?></span> past month</li>
+            <li class="all_time"><span title="<?php echo $alltime['uploaded']." B";?>"><?php echo getByteStr($alltime['uploaded']); ?></span> all-time</li>
           </ul>
           <ul class="summary_content clearfix" id="downloaded_summary">
-            <li class="past_24"><span><?php echo getByteStr($day['downloaded']); ?></span> past 24 hours</li>
-            <li class="past_week"><span><?php echo getByteStr($week['downloaded']); ?></span> past week</li>
-            <li class="past_month"><span><?php echo getByteStr($month['downloaded']); ?></span> past month</li>
-            <li class="all_time"><span><?php echo getByteStr($alltime['downloaded']); ?></span> all-time</li>
+            <li class="past_24"><span title="<?php echo $day['downloaded']." B";?>"><?php echo getByteStr($day['downloaded']); ?></span> past 24 hours</li>
+            <li class="past_week"><span title="<?php echo $week['downloaded']." B";?>"><?php echo getByteStr($week['downloaded']); ?></span> past week</li>
+            <li class="past_month"><span title="<?php echo $month['downloaded']." B";?>"><?php echo getByteStr($month['downloaded']); ?></span> past month</li>
+            <li class="all_time"><span title="<?php echo $alltime['downloaded']." B";?>"><?php echo getByteStr($alltime['downloaded']); ?></span> all-time</li>
           </ul>
         </div>
       </div>
@@ -184,11 +184,11 @@
               		$up=$d["uploaded"];
               		$diffup=$up-$lastup;
               		$lastup=$up;
-              		$fup=getByteStr($diffup)." <span class=\"all-time\">(".getByteStr($up).")</span>";
+              		$fup="<span title=\"".$diffup." B\">".getByteStr($diffup)."</span> <span class=\"all-time\" title=\"".$up." B\">(".getByteStr($up).")</span>";
               		$down=$d["downloaded"];
               		$diffdown=$down-$lastdown;
               		$lastdown=$down;
-              		$fdown=getByteStr($diffdown)." <span class=\"all-time\">(".getByteStr($down).")</span>";
+              		$fdown="<span title=\"".$diffdown." B\">".getByteStr($diffdown)."</span> <span class=\"all-time\" title=\"".$down." B\">(".getByteStr($down).")</span>";
               		$buffer=$d["buffer"];
               		$diffbuff=$buffer-$lastbuff;
               		$lastbuff=$buffer;
@@ -204,7 +204,7 @@
               		  $bufferclass = "negative";
               		}
                   
-              		$fbuff=getByteStr($diffbuff)." <span class=\"all-time\">(".getByteStr($buffer).")</span>";
+              		$fbuff="<span title=\"".$diffbuff." B\">".getByteStr($diffbuff)."</span> <span class=\"all-time\" title=\"".$buffer." B\">(".getByteStr($buffer).")</span>";
               		$ratio=number_format($d["ratio"],4);
               		$diffratio=number_format($ratio-$lastratio,4);
               		$lastratio=$ratio;
