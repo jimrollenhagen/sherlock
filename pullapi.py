@@ -1,10 +1,6 @@
 from __future__ import division
-import urllib
-import urllib2
-import cookielib
-import re
-import os
 import MySQLdb
+import requests
 import xml.etree.ElementTree as etree
 
 from config import db, api_path
@@ -12,10 +8,8 @@ from config import db, api_path
 def loadpage(url):
     url = "https://what.cd/" + url
 
-    req = urllib2.Request(url)
-    f = urllib2.urlopen(req)
-    content = f.read()
-    return content
+    res = requests.get(url)
+    return res.text
 
 def toBytes(value, type):
 	if type == 'B':
