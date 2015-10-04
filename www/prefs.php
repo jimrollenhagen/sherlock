@@ -38,7 +38,6 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<title>Sherlock - The IRC Search Bot &amp; Ratio Monitoring Service</title>
 	<link rel="stylesheet" href="css/application.css" type="text/css" media="screen" />
-	<script src="js/analytics.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/jquery-1.4.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/sherlock.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/dygraph-combined.js" type="text/javascript" charset="utf-8"></script>

@@ -54,7 +54,6 @@
 				margin:auto;
 			}
 			</style>
-			<script src="js/analytics.js" type="text/javascript" charset="utf-8"></script>
 		</head>
 		<body>
 			<div class="head">Sherlock (what.cd)</div>
