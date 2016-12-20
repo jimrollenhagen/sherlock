@@ -1,0 +1,39 @@
+mysql> use WHATstats;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> desc usernames;
++----------+-------------+------+-----+---------+----------------+
+| Field    | Type        | Null | Key | Default | Extra          |
++----------+-------------+------+-----+---------+----------------+
+| id       | int(11)     | NO   | PRI | NULL    | auto_increment |
+| username | varchar(40) | YES  | UNI | NULL    |                |
+| userid   | int(11)     | YES  | UNI | NULL    |                |
++----------+-------------+------+-----+---------+----------------+
+3 rows in set (0.00 sec)
+
+mysql> desc statistics;
++-----------------+-------------+------+-----+-------------------+-----------------------------+
+| Field           | Type        | Null | Key | Default           | Extra                       |
++-----------------+-------------+------+-----+-------------------+-----------------------------+
+| id              | int(11)     | NO   | PRI | NULL              | auto_increment              |
+| username        | varchar(40) | YES  | MUL | NULL              |                             |
+| ratio           | float(10,6) | YES  |     | NULL              |                             |
+| downloaded      | bigint(30)  | YES  |     | NULL              |                             |
+| downType        | varchar(2)  | YES  |     | NULL              |                             |
+| uploaded        | bigint(30)  | YES  |     | NULL              |                             |
+| upType          | varchar(2)  | YES  |     | NULL              |                             |
+| buffer          | bigint(30)  | YES  |     | NULL              |                             |
+| buffType        | varchar(2)  | YES  |     | NULL              |                             |
+| uploads         | int(11)     | YES  |     | NULL              |                             |
+| snatched        | int(11)     | YES  |     | NULL              |                             |
+| leeching        | int(11)     | YES  |     | NULL              |                             |
+| seeding         | int(11)     | YES  |     | NULL              |                             |
+| forumPosts      | int(11)     | YES  |     | NULL              |                             |
+| torrentComments | int(11)     | YES  |     | NULL              |                             |
+| date            | timestamp   | NO   |     | CURRENT_TIMESTAMP | on update CURRENT_TIMESTAMP |
+| hourlyRatio     | float(4,2)  | YES  |     | NULL              |                             |
++-----------------+-------------+------+-----+-------------------+-----------------------------+
+17 rows in set (0.00 sec)
+
